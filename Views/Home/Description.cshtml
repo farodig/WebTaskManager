@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Описание";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<div id="accordion">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Требования
+                </button>
+            </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox" checked>Разработать веб-приложение, которое позволяет менеджерам <a asp-area="" asp-controller="Task" asp-action="Index">просматривать задачи</a>.</p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox" checked>У менеджера должна быть возможность <a asp-area="" asp-controller="Task" asp-action="Expiring">просмотра задач с истекающим сроком окончания</a>.</p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox" checked>На странице <a asp-area="" asp-controller="Task" asp-action="Index">всех задач</a> - список задач (Название; Дата и время начала; Дата и время окончания, Статус активности).</p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox" checked>На странице <a asp-area="" asp-controller="Task" asp-action="Expiring">задач с истекающим сроком окончания</a> - список задач, которые должны быть закрыты в ближайшие 2 часа (Задача; Дата и время окончания).</p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox" checked>Визуально страницы можно сделать простыми.</p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox" checked>Использовать .net core, jquery или <mark data-toggle="tooltip" title="Asp.net MVC" style="cursor:pointer">любой frontend</mark> (Angular, ReactJs и т.д.).</p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox" checked>Результат выполнения (исходные коды) прислать в zip архиве или <a href="https://github.com/farodig/WebTaskManager">ссылкой на общедоступные ресурс</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Требования которые не описаны
+                </button>
+            </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox"> добавить авторизацию/регистрацию пользователей</p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox"> добавить роли пользователей Менеджер/Работник/Клиент/???</p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox"> автоматически закрывать задачи после даты и времени окончания </p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox"> добавить разбивку задач на страницы</p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox"> добавить возможность создания/редактирования/удаления задач</p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox"> использовать ajax для подгрузки списка задач/для переключения между таблицами</p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox"> добавить кешировать данных</p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox"> добавить логирование</p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox"> вынести модель БД в отдельную библиотеку</p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox"> добавить ViewModels для вывода данных на страницы</p>
+                <p>&nbsp;<input class="form-check-input mt-2" type="checkbox" checked> <mark data-toggle="tooltip" title="Темнеменее данное требование было выполнено, чтобы было что показывать" style="cursor:pointer">инициировать данные в базе</mark></p>
+                <div class="alert alert-primary" role="alert">
+                    В задаче нет этих требований (эти вопросы были бы заданы/или требования сформулированы мной в кейсах), при необходимости можно доделать тестовое задание с вышеуказанными требованиями
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
